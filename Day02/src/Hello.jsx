@@ -12,3 +12,4 @@ export const HelloWithoutJSX = () => {
     React.createElement("h1", null, "Hello firoz")
   );
 }
+
