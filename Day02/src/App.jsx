@@ -26,11 +26,11 @@ const App = () => {
       <Card title="Components" />
       <Card title="Props" /> */}
       
-      <CandidateCard name="Md Firoz Alam" role="Frontend Developer" experience={5} Available={true} skills={["React", "Javascript","CSS","HTML"]}/>
+      <CandidateCard name="Md Firoz Alam" role="Frontend Developer" experience={5} isAvailable={true} skills={["React", "Javascript","CSS","HTML"]}/>
 
-      <CandidateCard name="Md Noor Alam" role="Full Stack Developer" experience={5} Available={true} skills={["React","Node.js","Express.js","MySQL","JavaScript","Tailwind"]}/>
+      <CandidateCard name="Md Noor Alam" role="Full Stack Developer" experience={5} isAvailable={true} skills={["React","Node.js","Express.js","MySQL","JavaScript","Tailwind"]}/>
 
-      <CandidateCard name="Samsuddin" role="Software Enginner" experience={0} Available={false} skills={["React","Node.js","Express.js","MySQL","JavaScript","Tailwind","CI&CD"]}/>
+      <CandidateCard name="Samsuddin" role="Software Enginner" experience={0} isAvailable={false} skills={["React","Node.js","Express.js","MySQL","JavaScript","Tailwind","CI&CD"]}/>
 
     </div>
   )
