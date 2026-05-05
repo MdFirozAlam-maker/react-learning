@@ -3,6 +3,9 @@ import Header from './components/Header'
 import Card from './components/Card'
 import { Hello , HelloWithoutJSX} from './Hello'
 import { Candidateprofile } from './Candidateprofile'
+import Welcome from './Welcome'
+import Product from './Product'
+import CandidateCard from './components/CandidateCard'
 
  
 
@@ -11,14 +14,24 @@ const App = () => {
  
   return (
     <div>
+      {/* <Product title="Gaming laptop" price={1299.99} inStock={true} categories={["Electronics","Computers","Gaming"]} />
+      <Welcome name="firoz" alias="Batman"/>
+      <Welcome name="noor" alias="superman"/>
+      <Welcome name="samsudin" alias="loki"/>
       <Hello />
       <HelloWithoutJSX />
       <Candidateprofile />
       <Header />
       <Card title="React Learning" />
       <Card title="Components" />
-      <Card title="Props" />
+      <Card title="Props" /> */}
       
+      <CandidateCard name="Md Firoz Alam" role="Frontend Developer" experience={5} Available={true} skills={["React", "Javascript","CSS","HTML"]}/>
+
+      <CandidateCard name="Md Noor Alam" role="Full Stack Developer" experience={5} Available={true} skills={["React","Node.js","Express.js","MySQL","JavaScript","Tailwind"]}/>
+
+      <CandidateCard name="Samsuddin" role="Software Enginner" experience={0} Available={false} skills={["React","Node.js","Express.js","MySQL","JavaScript","Tailwind","CI&CD"]}/>
+
     </div>
   )
 }
