@@ -1,0 +1,337 @@
+/* =========================================
+   Base & Reset
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 750px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 2rem;
+}
+
+/* =========================================
+   Inputs & Main Call to Action (Add Button)
+   ========================================= */
+.input-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: stretch; /* Makes all items the exact same height */
+  flex-wrap: wrap;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+.search-input {
+  padding: 0 1rem;
+  height: 48px; /* Fixed height for uniformity */
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #f8fafc;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Allows text input to grow, but forces it to respect the button's size */
+input[type="text"] {
+  flex: 1 1 200px; 
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+.search-input:focus {
+  border-color: #6366f1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* --- THE PREMIUM ADD BUTTON --- */
+.custom-add-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px; /* Matches inputs perfectly */
+  padding: 0 1.5rem;
+  flex-shrink: 0; /* PREVENTS SQUISHING */
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+  white-space: nowrap;
+}
+
+.custom-add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.45);
+}
+
+.custom-add-btn:active {
+  transform: translateY(1px);
+}
+
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   Search, Filters & Counts
+   ========================================= */
+.search-input {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding-left: 2.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.filters button {
+  background: #f1f5f9;
+  color: #64748b;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filters button:hover {
+  background: #e2e8f0;
+}
+
+.filters button.active {
+  background: #0f172a;
+  color: white;
+}
+
+.task-counts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+/* =========================================
+   Task List & Items
+   ========================================= */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.task-item.dragging {
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  border-color: #6366f1;
+  z-index: 10;
+}
+
+.task-item.completed {
+  background-color: #f8fafc;
+  opacity: 0.6;
+}
+
+.task-item.completed .task-content span {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* =========================================
+   Task Content Details
+   ========================================= */
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.task-content span {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1e293b;
+  word-break: break-word;
+}
+
+.due-date {
+  font-size: 0.8rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.due-date::before {
+  content: "📅";
+  font-size: 0.85rem;
+}
+
+.priority {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.priority.High { background-color: #fee2e2; color: #b91c1c; }
+.priority.Medium { background-color: #fef3c7; color: #b45309; }
+.priority.Low { background-color: #d1fae5; color: #047857; }
+
+/* =========================================
+   Task Actions (Buttons)
+   ========================================= */
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.task-actions button {
+  padding: 0.6rem 0.85rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.complete-btn { background-color: #ecfdf5; color: #059669; }
+.complete-btn:hover { background-color: #d1fae5; }
+
+.edit-btn { background-color: #eff6ff; color: #2563eb; }
+.edit-btn:hover { background-color: #dbeafe; }
+
+.delete-btn { background-color: #fef2f2; color: #dc2626; }
+.delete-btn:hover { background-color: #fee2e2; }
+
+/* =========================================
+   Empty State & Clear Button
+   ========================================= */
+.empty-msg {
+  text-align: center;
+  color: #94a3b8;
+  padding: 3rem 1rem;
+  border: 2px dashed #e2e8f0;
+  border-radius: 12px;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.85rem;
+  background: transparent;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-btn:hover {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+@media (max-width: 680px) {
+  .container { padding: 1.5rem; }
+  
+  .input-bar { flex-direction: column; }
+  
+  /* On mobile, everything takes full width */
+  input[type="text"], input[type="date"], select, .custom-add-btn {
+    width: 100%;
+  }
+  
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  
+  .task-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .task-actions button { flex: 1; }
+}

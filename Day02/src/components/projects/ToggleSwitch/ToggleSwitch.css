@@ -1,0 +1,82 @@
+/* /* .outer-layer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  width: 120px;
+  height: 40px;
+  border-radius: 30px;
+  background: #333;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.switch.on {
+  background: #22c55e;
+}
+
+.switch.off {
+  background: #ef4444;
+}
+
+.thumb {
+  width: 40px;
+  height: 30px;
+  background: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: black;
+  transition: transform 0.3s ease;
+}
+
+/* movement */
+/* .switch.off .thumb {
+  transform: translateX(0);
+}
+
+.switch.on .thumb {
+  transform: translateX(70px);
+}
+
+.title {
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* hover effect */
+/* .title:hover {
+  transform: scale(1.05);
+  color: #22c55e;
+} */
+
+/* active state */
+/* .title.active {
+  color: #22c55e;
+  text-shadow: 0 0 10px #22c55e;
+} */
+
+/* .icon {
+  font-size: 28px;
+  transition: transform 0.3s ease;
+} */
+
+/* icon animation when ON */
+/* .title.active .icon {
+  transform: rotate(180deg) scale(1.2);
+}  */ */

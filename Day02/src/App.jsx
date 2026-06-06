@@ -1,15 +1,26 @@
 import React from 'react'
-import Header from './components/Header'
-import Card from './components/Card'
-import { Hello , HelloWithoutJSX} from './Hello'
-import { Candidateprofile } from './Candidateprofile'
-import Welcome from './Welcome'
-import Product from './Product'
-import CandidateCard from './components/CandidateCard'
-import NetflixSeries from './components/NetflixSeries'
-import Profile from './components/Profile'
+// import TodoApp from './components/projects/TodoApp/TodoApp'
+import { Todo } from './components/projects/MainTodoAppBySir/Todo'
+// import Header from './components/Header'
+// import Card from './components/Card'
+// import { Hello , HelloWithoutJSX} from './Hello'
+// import { Candidateprofile } from './Candidateprofile'
+// import Welcome from './Welcome'
+// import Product from './Product'
+// import CandidateCard from './components/CandidateCard'
+// import NetflixSeries from './components/NetflixSeries'
+// import Profile from './components/Profile'
 // import "./components/Netflix.css"
-import styles from './components/Netflix.module.css'
+// import styles from './components/Netflix.module.css'
+// import EventHandling from './EventHandlingConcepts/EventHandling'
+// import { EventProps } from './EventHandlingConcepts/EventProps'
+// import EventPropagation from './EventHandlingConcepts/EventPropagation'
+// import IntroState from './components/hooks/IntroState'
+// import DerivedState from './components/DerivedState'
+// import LiftingStateUp from './components/LiftingStateUp'
+// import MiniProjectToggle from './components/MiniProjectToggle'
+// import ToggleSwitch from './components/projects/ToggleSwitch'
+
 
  
 
@@ -36,12 +47,23 @@ const App = () => {
 
       <CandidateCard name="Samsuddin" role="Software Enginner" experience={0} isAvailable={false} skills={["React","Node.js","Express.js","MySQL","JavaScript","Tailwind","CI&CD"]}/> */}
 
-      <section className='container'>
+      {/* <section className='container'>
         <h1 className={styles["card-heading"]}>List of Best Netflix Series</h1>
         <NetflixSeries />
-      </section>
+      </section> */}
       {/* <Profile /> */}
-
+      {/* <EventHandling /> */}
+          {/* <EventProps /> */}
+          {/* <EventPropagation /> */}
+          {/* <IntroState /> */}
+          {/* <DerivedState /> */}
+          {/* <DerivedState /> */}
+          {/* <DerivedState /> */}
+          {/* <LiftingStateUp /> */}
+          {/* <MiniProjectToggle /> */}
+          {/* <ToggleSwitch /> */}
+          {/* <TodoApp /> */}
+          <Todo />
     </div>
   )
 }
