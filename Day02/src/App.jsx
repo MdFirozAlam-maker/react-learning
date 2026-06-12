@@ -1,6 +1,9 @@
 import React from 'react'
 // import TodoApp from './components/projects/TodoApp/TodoApp'
 import { Todo } from './components/projects/MainTodoAppBySir/Todo'
+import Index from './components/useState'
+import Challenge from './components/useState/Challenge/Challenge'
+import Registration from './components/Registration'
 // import Header from './components/Header'
 // import Card from './components/Card'
 // import { Hello , HelloWithoutJSX} from './Hello'
@@ -63,7 +66,10 @@ const App = () => {
           {/* <MiniProjectToggle /> */}
           {/* <ToggleSwitch /> */}
           {/* <TodoApp /> */}
-          <Todo />
+          {/* <Todo /> */}
+          {/* <Index /> */}
+          {/* <Challenge /> */}
+          <Registration />
     </div>
   )
 }
