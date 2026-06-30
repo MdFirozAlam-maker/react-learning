@@ -4,6 +4,9 @@ import { Todo } from './components/projects/MainTodoAppBySir/Todo'
 import Index from './components/useState'
 import Challenge from './components/useState/Challenge/Challenge'
 import Registration from './components/Registration'
+import RegistrationReact from './components/RegistrationReact'
+import LoginForm from './components/LoginForm'
+import ContactForm from './components/ContactForm'
 // import Header from './components/Header'
 // import Card from './components/Card'
 // import { Hello , HelloWithoutJSX} from './Hello'
@@ -69,7 +72,10 @@ const App = () => {
           {/* <Todo /> */}
           {/* <Index /> */}
           {/* <Challenge /> */}
-          <Registration />
+          {/* <Registration /> */}
+          {/* <RegistrationReact /> */}
+          {/* <LoginForm /> */}\
+          <ContactForm />
     </div>
   )
 }
