@@ -1,6 +1,7 @@
 import React from 'react'
 import Index from './components/useEffect'
 import EffectChallenge from './components/useEffect/EffectChallenge'
+import Pokemon from './components/pokemonProject/Pokemon'
 // import TodoApp from './components/projects/TodoApp/TodoApp'
 // import { Todo } from './components/projects/MainTodoAppBySir/Todo'
 // import Index from './components/useState'
@@ -38,7 +39,8 @@ const App = () => {
   return (
     <div>
           {/* <Index /> */}
-          <EffectChallenge />
+          {/* <EffectChallenge /> */}
+          <Pokemon />
     </div>
   )
 }
