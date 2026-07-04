@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f7f7f7, #dfe9f3);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+header h1 {
+  font-size: 2.7rem;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.card-demo {
+  list-style: none;
+}
+
+.pokemon-card {
+  width: 340px;
+  background:linear-gradient(145deg, #fff8d6, #ffffff);
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  transition: 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+
+.pokemon-card::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  background:#ffd54f;
+  border-radius:50%;
+  top:-70px;
+  right:-70px;
+  opacity:.25;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-card figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  z-index: 1;
+  position: relative;
+  transition: 0.4s;
+}
+
+.pokemon-card:hover img {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+.pokemon-card h2 {
+  margin-top: 15px;
+  font-size: 28px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.pokemon-card p {
+  margin-top: 8px;
+  color: #666;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #0558a5, #0b44e2);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(88, 117, 234, 0.35);
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(68, 147, 244, 0.45);
+}
+
+button:active {
+  transform: scale(0.85);
+}
+
+.name{
+  font-size:30px;
+  font-weight:bold;
+  text-transform:capitalize;
+  color:#222;
+  margin-top:10px;
+}
+
+.id{
+  color:#777;
+  margin-bottom:20px;
+  font-weight:600;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.stat{
+  background:#fff;
+  border-radius:12px;
+  padding:12px;
+  box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+.stat h4{
+  color:#777;
+  font-size:14px;
+}
+
+.stat p{
+  font-size:20px;
+  font-weight:bold;
+  color:#333;
+}
+
+.type{
+  display:inline-block;
+  background:#fdd835;
+  color:#222;
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
