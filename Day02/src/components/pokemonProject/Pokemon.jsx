@@ -69,7 +69,7 @@ const Pokemon = () => {
 
 </li>
       </ul>
-      <button onClick={() => setPokemonId(pokemonId + 1)}>Next Pokemon</button>
+      <button onClick={() => setPokemonId(pokemonId + 1)}>Click Next Pokemon</button>
     </section>
   );
 };
